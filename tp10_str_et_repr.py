@@ -1,8 +1,8 @@
-from adresse_postale import AdressePostale
+from adresse_postale import *
 
 
 class Personne:
-    def __init__(self, nom: str, prenom: str, adresse: AdressePostale = None,):
+    def __init__(self, nom: str, prenom: str, adresse: AdressePostale):
         self.nom = nom
         self.prenom = prenom
         self.adresse = adresse
@@ -13,7 +13,7 @@ class Personne:
     def __repr__(self):
         return f"Personne(nom='{self.nom}', prenom='{self.prenom}', adresse='{self.adresse}')"
 
-liste = [Personne("HENRY", "Fernand")]
-per3 = Personne("Michel", "henry")
+liste = [Personne("HENRY", "Fernand", adr1)]
+per3 = Personne("Michel", "henry", adr1)
 print(liste)
 print(per3)

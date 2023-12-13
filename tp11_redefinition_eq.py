@@ -1,8 +1,8 @@
-from adresse_postale import AdressePostale
+from adresse_postale import *
 
 
 class Personne:
-    def __init__(self, nom: str, prenom: str, adresse: AdressePostale = None, ):
+    def __init__(self, nom: str, prenom: str, adresse: AdressePostale, ):
         self.nom = nom
         self.prenom = prenom
         self.adresse = adresse
@@ -19,6 +19,6 @@ class Personne:
         return self.nom == other.nom and self.prenom == other.prenom and self.adresse == other.adresse
 
 
-per4 = Personne("ELIE DIT COSAQUE", "henry")
-per5 = Personne("ELIE DIT COSAQUE", "henry")
+per4 = Personne("ELIE DIT COSAQUE", "henry", adr2)
+per5 = Personne("ELIE DIT COSAQUE", "henry", adr2)
 print(per4 == per5)
