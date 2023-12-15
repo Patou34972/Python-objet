@@ -1,25 +1,23 @@
-class Ville:
-    def __init__(self, nom, population: int):
+class Personne:
+    def __init__(self, nom, prenom: int):
         self.nom = nom
-        self.population = population
+        self.prenom = prenom
 
     def __lt__(self, autre):
-        # return self.population < autre.population
-        return self.nom < autre.nom
+        return self.prenom < autre.prenom
+        #return self.nom < autre.nom
 
 
 # Liste des villes
-villes = [
-    Ville("Nice", 343000),
-    Ville("Carcassonne", 47800),
-    Ville("Narbonne", 53400),
-    Ville("Lyon", 484000),
-    Ville("Foix", 9700),
-    Ville("Pau", 77200),
-    Ville("Marseille", 850700),
-    Ville("Tarbes", 40600)
+personnes = [
+    Personne("ELIE DIT COSAQUE", "Patrice"),
+    Personne("ELIE DIT COSAQUE", "Chrystelle"),
+    Personne("GOJON-GERBELOT", "Melanie"),
+    Personne("NIRDE", "Jean-Noêl"),
+    Personne("BANCE", "Cedric"),
+
 ]
 
-villes_triees = sorted(villes)
-for ville in villes_triees:
-    print(f"{ville.nom}: {ville.population}")
+personnes_triees = sorted(personnes)
+for personne in personnes_triees:
+    print(f"{personne.nom}: {personne.prenom}")
