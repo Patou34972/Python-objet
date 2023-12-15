@@ -21,15 +21,14 @@ class PersonneService:
             print(f"Erreur de validation : {str(e)}")
         else:
             print("Validation réussie.")
+        finally:
+            print("Fin de programme")
 
 
 service = PersonneService()
-try:
-    service.inserDonnees("", "Patrice", "1 Allée Michel Piquemal, 34830 JACOU")
-    service.inserDonnees("GOJON-GERBELOT", "M", "25 Rue Moulin à vent, 73000 GERBAIX")
-    service.inserDonnees("BANCE", "", "Lieut dit Michel Gros, 97200 FORT DE FRANCE")
-    service.inserDonnees("NIRDE", "Jean-Noêl", "")
-except PersonneException as e:
-    print(f"Erreur de validation : {str(e)}")
-finally:
-    print("Fin de programme.")
+
+service.inserDonnees("", "Patrice", "1 Allée Michel Piquemal, 34830 JACOU")
+service.inserDonnees("GOJON-GERBELOT", "M", "25 Rue Moulin à vent, 73000 GERBAIX")
+service.inserDonnees("BANCE", "", "Lieut dit Michel Gros, 97200 FORT DE FRANCE")
+service.inserDonnees("NIRDE", "Jean-Noêl", "")
+
